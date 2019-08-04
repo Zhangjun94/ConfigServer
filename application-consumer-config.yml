@@ -1,0 +1,36 @@
+#配置dev环境
+server:
+  port: 7070
+
+spring:
+  profiles: dev
+  application:
+    name: abcmsc-consumer-depart
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+
+feign:
+  hystrix:
+    enabled: true
+
+---
+#配置test环境
+server:
+  port: 9090
+
+spring:
+  profiles: test
+  application:
+    name: abcmsc-consumer-depart
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8002/eureka
+
+feign:
+  hystrix:
+    enabled: true

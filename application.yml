@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+---
+#开发环境
+spring:
+  application:
+    name: abcms-config-dev
+  profiles: dev
+---
+spring:
+  application:
+    name: abcms-config-test
+  profiles: test
